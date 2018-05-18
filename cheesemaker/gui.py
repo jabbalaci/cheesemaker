@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Authors: David Whitlock <alovedalongthe@gmail.com>
 # A minimalistic image viewer
 # Copyright (C) 2013-2014 David Whitlock
@@ -25,7 +27,7 @@ from functools import partial
 import os
 import sys
 import random
-from . import preferences, editimage
+import preferences, editimage
 
 class MainWindow(QMainWindow):
     def __init__(self, parent):
@@ -142,7 +144,7 @@ class MainWindow(QMainWindow):
 
     def showMenu(self, pos):
         self.popup.popup(self.mapToGlobal(pos))
- 
+
     def create_dict(self):
         """Create a dictionary to handle auto-orientation."""
         self.orient_dict = {None: self.load_img,
@@ -472,3 +474,8 @@ def main():
     app = ImageViewer(sys.argv)
     app.startup()
     app.exec_()
+
+##############################################################################
+
+if __name__ == "__main__":
+    main()

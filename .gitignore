@@ -1,2 +1,4 @@
 dist/
 cheesemaker.egg-info/
+__pycache__
+cd_venv_dir.sh
